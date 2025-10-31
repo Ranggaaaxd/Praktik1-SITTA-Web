@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stok Bahan Ajar - SITTA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <header class="sidebar-header">
+                <a href="dashboard.html" class="logo">SITTA</a>
+            </header>
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+                <li><a href="stok.html" class="active"><i class="fa-solid fa-box"></i> Stok Bahan Ajar</a></li>
+                <li><a href="tracking.html"><i class="fa-solid fa-truck-fast"></i> Lacak Pengiriman</a></li>
+                <li class="sidebar-dropdown">
+                    <a href="#"><i class="fa-solid fa-chart-line"></i> Laporan <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: auto;"></i></a>
+                    <ul class="sidebar-submenu">
+                        <li><a href="laporan_do.html">Progress DO</a></li>
+                        <li><a href="laporan_rekap.html">Rekap Bahan Ajar</a></li>
+                    </ul>
+                </li>
+                <li><a href="histori.html"><i class="fa-solid fa-file-invoice"></i> Histori Transaksi</a></li>
+            </ul>
+            <footer class="sidebar-footer">
+                <ul class="sidebar-menu">
+                    <li><a href="#"><i class="fa-solid fa-user"></i> Profile</a></li>
+                    <li><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+                </ul>
+            </footer>
+        </aside>
+        <main class="main-content">
+            <div class="page-header">
+                <h1>Stok Bahan Ajar</h1>
+                <p>Kelola dan lihat persediaan bahan ajar di sini.</p>
+            </div>
+            <div id="stok-list-container" class="stok-list-container">
+                <!-- Kartu-kartu buku akan dimuat di sini secara dinamis oleh JavaScript -->
+            </div>
+            <div class="content-box">
+                <h2>Update Stok Barang</h2>
+                <p style="margin-top: -15px; margin-bottom: 20px; font-size: 0.9rem; color: #777;">
+                
+                </p>
+                <form id="updateStokForm">
+                    <input type="text" id="updateKodeBarang" placeholder="Masukkan Kode Barang (contoh: ASIP4301)" required>
+                    <input type="number" id="jumlahTambahan" placeholder="Jumlah Stok yang Ditambahkan" min="1" required>
+                    <button type="submit" class="btn">Update Stok</button>
+                </form>
+            </div>
+            <div class="content-box">
+                <h2>Tambah Barang Baru</h2>
+                <p style="margin-top: -15px; margin-bottom: 20px; font-size: 0.9rem; color: #777;">
+                    
+                </p>
+                <form id="addStokForm">
+                    <input type="text" id="addKodeBarang" placeholder="Kode Barang Baru (contoh: HKUM4201)" required>
+                    <input type="text" id="addNamaBarang" placeholder="Nama Barang" required>
+                    <input type="text" id="addJenisBarang" placeholder="Jenis Barang (contoh: BMP)" required>
+                    <input type="number" id="addEdisi" placeholder="Edisi" min="1" required>
+                    <input type="number" id="addStok" placeholder="Jumlah Stok Awal" min="1" required>
+                    <button type="submit" class="btn">Tambah Barang Baru</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

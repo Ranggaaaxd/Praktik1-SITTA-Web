@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lacak Pengiriman - SITTA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <header class="sidebar-header">
+                <a href="dashboard.html" class="logo">SITTA</a>
+            </header>
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+                <li><a href="stok.html"><i class="fa-solid fa-box"></i> Stok Bahan Ajar</a></li>
+                <li><a href="tracking.html" class="active"><i class="fa-solid fa-truck-fast"></i> Lacak Pengiriman</a></li>
+                <li class="sidebar-dropdown">
+                    <a href="#"><i class="fa-solid fa-chart-line"></i> Laporan <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: auto;"></i></a>
+                    <ul class="sidebar-submenu">
+                        <li><a href="laporan_do.html">Progress DO</a></li>
+                        <li><a href="laporan_rekap.html">Rekap Bahan Ajar</a></li>
+                    </ul>
+                </li>
+                <li><a href="histori.html"><i class="fa-solid fa-file-invoice"></i> Histori Transaksi</a></li>
+            </ul>
+            <footer class="sidebar-footer">
+                <ul class="sidebar-menu">
+                    <li><a href="#"><i class="fa-solid fa-user"></i> Profile</a></li>
+                    <li><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+                </ul>
+            </footer>
+        </aside>
+        <main class="main-content">
+            <div class="page-header">
+                <h1>Lacak Pengiriman</h1>
+                <p>Masukkan nomor DO untuk melihat status pengiriman paket.</p>
+            </div>
+            <div class="content-box">
+                <h2>Pencarian Paket</h2>
+                <form id="trackingForm">
+                    <input type="text" id="nomorDO" placeholder="Masukkan Nomor Delivery Order" required>
+                    <button type="submit" class="btn">Cari Paket</button>
+                </form>
+            </div>
+            <div id="hasil-tracking" style="margin-top: 20px;">
+                <!-- Hasil pencarian akan muncul di sini -->
+            </div>
+        </main>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

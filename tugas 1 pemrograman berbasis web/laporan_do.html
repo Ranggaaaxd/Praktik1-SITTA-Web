@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Progress DO - SITTA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <header class="sidebar-header">
+                <a href="dashboard.html" class="logo">SITTA</a>
+            </header>
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+                <li><a href="stok.html"><i class="fa-solid fa-box"></i> Stok Bahan Ajar</a></li>
+                <li><a href="tracking.html"><i class="fa-solid fa-truck-fast"></i> Lacak Pengiriman</a></li>
+                <li class="sidebar-dropdown">
+                    <a href="#" class="active"><i class="fa-solid fa-chart-line"></i> Laporan <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: auto;"></i></a>
+                    <ul class="sidebar-submenu" style="max-height: 200px;"> <!-- Buka dropdown by default -->
+                        <li><a href="laporan_do.html" style="color: #1a73e8; background-color: #fff;">Progress DO</a></li>
+                        <li><a href="laporan_rekap.html">Rekap Bahan Ajar</a></li>
+                    </ul>
+                </li>
+                <li><a href="histori.html"><i class="fa-solid fa-file-invoice"></i> Histori Transaksi</a></li>
+            </ul>
+            <footer class="sidebar-footer">
+                <ul class="sidebar-menu">
+                    <li><a href="#"><i class="fa-solid fa-user"></i> Profile</a></li>
+                    <li><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+                </ul>
+            </footer>
+        </aside>
+        <main class="main-content">
+            <div class="page-header">
+                <h1>Monitoring Progress DO</h1>
+                <p>Ringkasan status semua pengiriman bahan ajar.</p>
+            </div>
+            <div class="stats-cards" id="do-stats-cards">
+                <!-- Kartu Statistik akan dimuat di sini -->
+            </div>
+            <div class="content-box">
+                <h2>Detail Semua Pengiriman</h2>
+                <table id="do-table">
+                    <thead>
+                        <tr>
+                            <th>No. DO</th>
+                            <th>Nama Penerima</th>
+                            <th>Tanggal Kirim</th>
+                            <th>Ekspedisi</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="do-table-body"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
